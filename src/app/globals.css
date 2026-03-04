@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tailwind-scrollbar-hide/v4";
 
 :root {
   /* Background */
@@ -6,7 +7,7 @@
   --primary-bg: #121212;
 
   --card-bg: #1e1e1e;
-  --header-bg: #000000cc;
+  --header-bg: #000000;
   --button-bg: #e60000;
 
   --opacity-bg: #ffffffcc;
@@ -23,9 +24,15 @@
 
   /* Shadow */
 
-  --block-shadow: 4px 4px 4px var(--opacity-color);
+  --block-shadow: 3px 3px 12px 1px var(--opacity-color);
   --form-shadow: 0 0 6px 12px var(--opacity-color);
   --burger-shadow: -4px 4px 12px 4px var(--opacity-color);
+  --button-shadow: 0 0 6px 3px var(--opacity-color);
+
+
+  /* Padding and Margin */
+
+  --section-padding-bottom: clamp(80px,40vw,120px);
 
   /* Font */
 
@@ -57,6 +64,11 @@
   --shadow-block-shadow: var(--block-shadow);
   --shadow-form-shadow: var(--form-shadow);
   --shadow-burger-shadow: var(--burger-shadow);
+  --shadow-button-shadow: var(--button-shadow);
+
+  /* Padding and Margin */
+
+  --padding-section-padding-bottom: var(--section-padding-bottom);
 
   /* Font */
 

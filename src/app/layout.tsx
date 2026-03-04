@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Александр Пушной",
   description: "Александр Пушной - фанатский сайт",
   icons: {
-    icon: "/favicon.png",
+    icon: "Fur-bearing/favicon.png",
   },
   authors: [
     {
