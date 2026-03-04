@@ -1,26 +1,77 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background */
+
+  --primary-bg: #121212;
+  
+  --card-bg: #1E1E1E;
+  --header-bg: #000000cc;
+  --button-bg: #E60000;
+
+  --opacity-bg: #FFFFFFcc;
+
+
+  /* Color */
+
+  --accent-color: #FFD700;
+  --primary-color: #FFFFFF;
+
+  --placeholder-color: #888888;
+
+
+  /* Shadow */
+
+  --block-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  --form-shadow: 0 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Background */
+
+  --color-primary-bg: var(--primary-bg);
+  
+  --color-card-bg: var(--card-bg);
+  --color-header-bg: var(--header-bg);
+  --color-button-bg: var(--button-bg);
+
+  --color-opacity-bg: var(--opacity-bg);
+
+
+  /* Color */
+
+  --color-accent-color: var(--accent-color);
+  --color-primary-color: var(--primary-color);
+
+  --color-placeholder-color: var(--placeholder-color);
+
+
+  /* Shadow */
+
+  --shadow-block-shadow: var(--block-shadow);
+  --shadow-form-shadow: var(--form-shadow);
+
+
+  --font-monserat: var(--font-monserat);
+  --font-oswald: var(--font-oswald);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--primary-bg);
+  color: var(--primary-color);
+  font-family: var(--font-monserat);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-oswald);
+}
+
+button, label {
+  cursor: pointer;
 }
