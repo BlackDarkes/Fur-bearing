@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[68286,["/Fur-bearing/_next/static/chunks/6b7f82548d39295c.js","/Fur-bearing/_next/static/chunks/f15d73695505fd45.js"],"Header"]
+3:I[68559,["/Fur-bearing/_next/static/chunks/e5ebcb019269227a.js","/Fur-bearing/_next/static/chunks/bc0aa6c15581d579.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"fbIsWUH7qZMHFkpMxfuto","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/Fur-bearing/_next/static/chunks/6b7f82548d39295c.js","async":true}],["$","script","script-1",{"src":"/Fur-bearing/_next/static/chunks/f15d73695505fd45.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
