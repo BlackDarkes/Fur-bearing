@@ -24,6 +24,12 @@
 
   --block-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   --form-shadow: 0 0 6px 12px rgba(0, 0, 0, 0.25);
+
+
+  /* Font */
+
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
 }
 
 @theme inline {
@@ -52,7 +58,9 @@
   --shadow-form-shadow: var(--form-shadow);
 
 
-  --font-monserat: var(--font-monserat);
+  /* Font */
+
+  --font-montserrat: var(--font-montserrat);
   --font-oswald: var(--font-oswald);
 }
 
@@ -60,7 +68,11 @@
 body {
   background: var(--primary-bg);
   color: var(--primary-color);
-  font-family: var(--font-monserat);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-montserrat);
 }
 
 h1,

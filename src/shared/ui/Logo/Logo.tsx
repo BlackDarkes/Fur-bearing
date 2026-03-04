@@ -6,7 +6,7 @@ export const Logo = () => {
   return (
     <div className={cn("flex items-center gap-x-3.75 text-accent-color text-[clamp(24px,2.5vw,28px)] font-bold font-oswald select-none")}>
       <Image src={ImageLogo} alt="logo" />
-      <a href="#">Александр Пушной</a>
+      <a href="#" >Александр Пушной</a>
     </div>
   );
 };

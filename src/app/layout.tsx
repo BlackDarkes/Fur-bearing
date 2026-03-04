@@ -4,12 +4,12 @@ import "./globals.css";
 
 const oswald = Oswald({
   variable: "--font-oswald",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
 });
 
 export const metadata: Metadata = {
