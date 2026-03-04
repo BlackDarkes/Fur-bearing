@@ -4,27 +4,28 @@
   /* Background */
 
   --primary-bg: #121212;
-  
-  --card-bg: #1E1E1E;
+
+  --card-bg: #1e1e1e;
   --header-bg: #000000cc;
-  --button-bg: #E60000;
+  --button-bg: #e60000;
 
-  --opacity-bg: #FFFFFFcc;
-
+  --opacity-bg: #ffffffcc;
+  --opacity-bg-dark: #00000080;
 
   /* Color */
 
-  --accent-color: #FFD700;
-  --primary-color: #FFFFFF;
+  --accent-color: #ffd700;
+  --primary-color: #ffffff;
 
   --placeholder-color: #888888;
 
+  --opacity-color: #FFFFFF40;
 
   /* Shadow */
 
-  --block-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  --form-shadow: 0 0 6px 12px rgba(0, 0, 0, 0.25);
-
+  --block-shadow: 4px 4px 4px var(--opacity-color);
+  --form-shadow: 0 0 6px 12px var(--opacity-color);
+  --burger-shadow: -4px 4px 12px 4px var(--opacity-color);
 
   /* Font */
 
@@ -36,13 +37,13 @@
   /* Background */
 
   --color-primary-bg: var(--primary-bg);
-  
+
   --color-card-bg: var(--card-bg);
   --color-header-bg: var(--header-bg);
   --color-button-bg: var(--button-bg);
 
   --color-opacity-bg: var(--opacity-bg);
-
+  --color-opacity-bg-dark: var(--opacity-bg-dark);
 
   /* Color */
 
@@ -51,19 +52,17 @@
 
   --color-placeholder-color: var(--placeholder-color);
 
-
   /* Shadow */
 
   --shadow-block-shadow: var(--block-shadow);
   --shadow-form-shadow: var(--form-shadow);
-
+  --shadow-burger-shadow: var(--burger-shadow);
 
   /* Font */
 
   --font-montserrat: var(--font-montserrat);
   --font-oswald: var(--font-oswald);
 }
-
 
 body {
   background: var(--primary-bg);
@@ -84,6 +83,11 @@ h6 {
   font-family: var(--font-oswald);
 }
 
-button, label {
+button,
+label {
   cursor: pointer;
+}
+
+main {
+  margin-top: clamp(126px,15vw,140px);
 }
