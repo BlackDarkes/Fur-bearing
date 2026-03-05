@@ -15,7 +15,7 @@ export const NewsListItem = ({ item }: INewsListItemProps) => {
     <li
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative w-fit rounded-lg"
+      className="relative w-fit rounded-lg shadow-block-shadow"
     >
       <Image
         src={item.img}
