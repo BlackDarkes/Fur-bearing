@@ -20,7 +20,7 @@
 
   --placeholder-color: #888888;
 
-  --opacity-color: #FFFFFF40;
+  --opacity-color: #ffffff40;
 
   /* Shadow */
 
@@ -29,10 +29,9 @@
   --burger-shadow: -4px 4px 12px 4px var(--opacity-color);
   --button-shadow: 0 0 6px 3px var(--opacity-color);
 
-
   /* Padding and Margin */
 
-  --section-padding-bottom: clamp(80px,40vw,120px);
+  --section-padding-bottom: clamp(80px, 40vw, 120px);
 
   /* Font */
 
@@ -76,6 +75,29 @@
   --font-oswald: var(--font-oswald);
 }
 
+@layer base {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover {
+    /* Тень и текст */
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-primary-bg) inset !important;
+    -webkit-text-fill-color: white !important;
+    
+    /* СБРОС: убираем рамки со всех сторон */
+    border: none !important;
+    /* ВОЗВРАТ: рисуем только нижнюю */
+    border-bottom: 1px solid var(--color-placeholder-color) !important;
+    border-radius: 0; 
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  input:-webkit-autofill:focus {
+    /* При фокусе ты хотел скругление и полную рамку акцентного цвета */
+    border: 1px solid var(--color-placeholder-color) !important;
+    border-radius: 8px !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-primary-bg) inset !important;
+  }
+}
+
 body {
   background: var(--primary-bg);
   color: var(--primary-color);
@@ -101,5 +123,5 @@ label {
 }
 
 main {
-  margin-top: clamp(126px,15vw,140px);
+  margin-top: clamp(126px, 15vw, 140px);
 }

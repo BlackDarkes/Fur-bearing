@@ -1,5 +1,6 @@
-import { Header } from "@/components/header/ui/Header";
-import { Hero } from "@/components/hero/ui/Hero";
+import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
+import { FormEntry } from "@/components/form-entry";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <FormEntry />
       </main>
     </>
   );
