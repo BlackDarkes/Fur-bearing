@@ -38,7 +38,7 @@ export const useHeroStore = create<IHeroStore>()(
 
           if (firstChild) {
             el.scrollBy({
-              left: firstChild.clientWidth,
+              left: firstChild.clientWidth + 25,
               behavior: "smooth",
             });
           }

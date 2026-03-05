@@ -16,10 +16,10 @@ export const Selector = ({ options, register }: ISelectorProps) => {
       className={cn(
         `p-[clamp(20px,4vw,30px)_clamp(10px,4vw,20px)] bg-primary-bg border border-placeholder-color rounded-lg`,
       )}
-      defaultValue="-----"
+      defaultValue=""
     >
-      <option value="-----" disabled>
-        -----
+      <option value="" disabled>
+        Выберите мероприятие
       </option>
       {options.map((option, index) => (
         <SelectorOption key={index} option={option} />

@@ -9,7 +9,7 @@ interface IHeroListItemProps {
 
 export const HeroListItem = ({ item }: IHeroListItemProps) => {
   return (
-    <li className="shrink-0 bg-card-bg rounded-xl shadow-block-shadow">
+    <li className="shrink-0 bg-card-bg rounded-xl shadow-block-shadow snap-center">
       <Image src={item.img} alt={item.title} width={260} height={260} />
 
       <div className="p-2.5">

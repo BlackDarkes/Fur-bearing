@@ -7,7 +7,7 @@ import { HERO_ITEMS } from "@/constants/hero-items";
 
 export const Hero = () => {
   return (
-    <section className="pt-[clamp(50px,40vw,70px)] pb-section-padding-bottom">
+    <section className="pt-[clamp(20px,4vw,70px)] pb-section-padding-bottom">
       <Container>
         <HeroList items={HERO_ITEMS} />
         <Buttons />
