@@ -1,4 +1,4 @@
-import { IEventItems } from "@/constants/event-items";
+import { IEventItems } from "@/constants/form-entry/event-items";
 import { SelectorOption } from "./SelectorOption";
 import { cn } from "@/shared/lib/utils";
 import { UseFormRegisterReturn } from "react-hook-form";

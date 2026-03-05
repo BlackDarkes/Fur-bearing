@@ -1,4 +1,4 @@
-import { IHeroItems } from "@/constants/hero-items";
+import { IHeroItems } from "@/constants/hero/hero-items";
 import { cn } from "@/shared/lib/utils";
 import Image from "next/image";
 import Link from "next/link";

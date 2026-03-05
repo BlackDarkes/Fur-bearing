@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { TypeUserData, userDataSchema } from "../../model/user-data";
 import { Selector } from "../fields/Selector";
 import { ButtonForm } from "../button/ButtonForm";
-import { EVENT_ITEMS } from "@/constants/event-items";
+import { EVENT_ITEMS } from "@/constants/form-entry/event-items";
 import { cn } from "@/shared/lib/utils";
 import { useState } from "react";
 import { Field } from "../fields/Field";
@@ -28,10 +28,13 @@ export const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit, (err) => {
-      console.error("ПОЛНЫЙ ОБЪЕКТ ОШИБОК ZOD:", JSON.stringify(err, null, 2));
-      console.log("ОШИБКА В ПОЛЕ FIO:", err.fio);
-      console.log("ОШИБКА В ПОЛЕ EVENT:", err.event);
-    })}
+        console.error(
+          "ПОЛНЫЙ ОБЪЕКТ ОШИБОК ZOD:",
+          JSON.stringify(err, null, 2),
+        );
+        console.log("ОШИБКА В ПОЛЕ FIO:", err.fio);
+        console.log("ОШИБКА В ПОЛЕ EVENT:", err.event);
+      })}
       className={cn(
         `flex flex-col gap-y-[clamp(50px,4vw,60px)] p-[clamp(20px,4vw,40px)] mx-auto w-[min(800px,100%)] rounded-2xl shadow-form-shadow `,
       )}

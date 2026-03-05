@@ -1,4 +1,4 @@
-import { IHeaderNavItems } from "@/constants/header-nav-items";
+import { IHeaderNavItems } from "@/constants/header/header-nav-items";
 import { cn } from "@/shared/lib/utils";
 import Link from "next/link";
 import { useNavStore } from "../../model/nav-store";

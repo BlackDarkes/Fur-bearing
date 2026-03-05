@@ -2,7 +2,7 @@
 
 import { Container, Logo } from "@/shared/ui";
 import { NavList } from "./nav/NavList";
-import { HEADER_NAV_ITEMS } from "@/constants/header-nav-items";
+import { HEADER_NAV_ITEMS } from "@/constants/header/header-nav-items";
 import { BurgerButton } from "./burger/BurgerButton";
 import { BurgerMenu } from "./burger/BurgerMenu";
 import { useBurgerStore } from "../model/burger-store";
@@ -19,9 +19,13 @@ export const Header = () => {
 
         <div className="lg:hidden">
           <BurgerButton isOpen={isOpen} handleOpen={handleOpen} />
-          <BurgerMenu items={HEADER_NAV_ITEMS} isOpen={isOpen} handleOpen={handleOpen} />
+          <BurgerMenu
+            items={HEADER_NAV_ITEMS}
+            isOpen={isOpen}
+            handleOpen={handleOpen}
+          />
         </div>
       </Container>
     </header>
   );
-}
+};

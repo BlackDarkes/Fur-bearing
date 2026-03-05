@@ -1,4 +1,4 @@
-import { EVENT_ITEMS } from "@/constants/event-items";
+import { EVENT_ITEMS } from "@/constants/form-entry/event-items";
 import { type infer as zInfer, object, string } from "zod";
 
 const userDataSchema = object({

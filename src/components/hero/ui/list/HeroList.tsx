@@ -1,4 +1,4 @@
-import { IHeroItems } from "@/constants/hero-items";
+import { IHeroItems } from "@/constants/hero/hero-items";
 import { HeroListItem } from "./HeroListItem";
 import { cn } from "@/shared/lib/utils";
 import { useEffect, useRef } from "react";

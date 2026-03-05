@@ -1,4 +1,4 @@
-import { IHeaderNavItems } from "@/constants/header-nav-items";
+import { IHeaderNavItems } from "@/constants/header/header-nav-items";
 import Link from "next/link";
 import { useNavStore } from "../../model/nav-store";
 import { cn } from "@/shared/lib/utils";
@@ -7,7 +7,7 @@ import { useBurgerStore } from "../../model/burger-store";
 interface IBurgerMenuItemProps {
   item: IHeaderNavItems;
 }
-  
+
 export const BurgerMenuItem = ({ item }: IBurgerMenuItemProps) => {
   const { active, setActive } = useNavStore();
   const { handleOpen } = useBurgerStore();
@@ -28,4 +28,4 @@ export const BurgerMenuItem = ({ item }: IBurgerMenuItemProps) => {
       <Link href={item.href}>{item.title}</Link>
     </li>
   );
-}
+};
