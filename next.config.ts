@@ -7,7 +7,15 @@ const nextConfig: NextConfig = {
   basePath: "/Fur-bearing",
   images: {
     unoptimized: true,
-  }
+  },
+   turbopack: {
+    rules: {
+      ".mp3": {
+        as: "resource",
+        loaders: ["file-loader"]
+      }
+    }
+  },
 };
 
 export default nextConfig;
