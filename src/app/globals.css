@@ -32,6 +32,7 @@
   /* Padding and Margin */
 
   --section-padding-bottom: clamp(80px, 40vw, 120px);
+  --footer-margin-top: clamp(140px, 40vw, 220px);
 
   /* Font */
 
@@ -68,6 +69,7 @@
   /* Padding and Margin */
 
   --padding-section-padding-bottom: var(--section-padding-bottom);
+  --margin-footer-margin-top: var(--footer-margin-top);
 
   /* Font */
 
