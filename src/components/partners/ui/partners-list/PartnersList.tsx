@@ -7,7 +7,7 @@ interface IPartnersListProps {
   
 export const PartnersList = ({ items }: IPartnersListProps) => {
   return (
-    <ul className="flex justify-between gap-x-5 overflow-auto">
+    <ul className="flex justify-between gap-x-5 py-5 scrollbar-hide select-none max-[1440px]:overflow-x-scroll">
       { items.map((item) => (
         <PartnersListItem key={item.id} item={item} />
       )) }

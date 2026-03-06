@@ -25,8 +25,8 @@ export const HeroListItem = ({ item }: IHeroListItemProps) => {
         <Link
           href={item.link}
           className={cn(
-            `block mt-5 py-2 w-full text-center text-[clamp(14px,4vw,18px)] font-bold uppercase text-primary-color bg-button-bg rounded-xl transition duration-500
-            hover:opacity-80 active:opacity-80`,
+            `block mt-5 py-2 w-full text-center text-[clamp(14px,4vw,18px)] font-bold uppercase text-primary-color bg-button-bg rounded-xl transition duration-400
+            hover:opacity-80 active:opacity-80 hover:scale-101 active:scale-99`,
           )}
         >
           Купить

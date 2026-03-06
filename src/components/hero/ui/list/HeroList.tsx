@@ -24,7 +24,7 @@ export const HeroList = ({ items }: IHeroListProps) => {
     <ul
       ref={containerRef}
       className={cn(
-        `flex gap-x-6.5 py-5 pr-5 w-full scrollbar-hide overflow-auto snap-mandatory snap-x`,
+        `flex gap-x-6.5 py-5 px-[7px_20px] w-full scrollbar-hide overflow-auto snap-mandatory snap-x`,
       )}
     >
       {items.map((item) => (

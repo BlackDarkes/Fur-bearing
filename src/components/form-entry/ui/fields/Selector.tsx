@@ -14,7 +14,8 @@ export const Selector = ({ options, register }: ISelectorProps) => {
       {...register}
       id="events"
       className={cn(
-        `p-[clamp(20px,4vw,30px)_clamp(10px,4vw,20px)] bg-primary-bg border border-placeholder-color rounded-lg`,
+        `p-[clamp(20px,4vw,30px)_clamp(10px,4vw,20px)] bg-primary-bg border border-placeholder-color rounded-lg transition-all duration-400
+        hover:border-primary-color active:border-primary-color hover:rounded-[14px]`,
       )}
       defaultValue=""
     >

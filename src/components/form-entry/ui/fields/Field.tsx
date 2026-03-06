@@ -17,9 +17,7 @@ export const Field = ({ register, isFocus, setIsFocus }: IFieldProps) => {
       onBlur={() => setIsFocus(false)}
       className={cn(
         `w-full py-2.5 px-4 bg-transparent text-white placeholder:text-placeholder-color outline-none border border-transparent border-b-placeholder-color transition ease-in duration-300
-        autofill:shadow-[inset_0_0_0px_1000px_var(--color-primary-bg)] autofill:text-fill-white
-        autofill:border-transparent 
-        autofill:border-b-placeholder-color`,
+        hover:border-placeholder-color hover:rounded-lg`,
         isFocus
           ? "border-b-accent-color border-placeholder-color rounded-lg"
           : "",

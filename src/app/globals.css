@@ -24,8 +24,8 @@
 
   /* Shadow */
 
-  --block-shadow: 3px 3px 12px 1px var(--opacity-color);
-  --form-shadow: 0 0 6px 12px var(--opacity-color);
+  --block-shadow: 3px 3px 12px 0.5px var(--opacity-color);
+  --form-shadow: 0 0 12px 1px var(--opacity-color);
   --burger-shadow: -4px 4px 12px 4px var(--opacity-color);
   --button-shadow: 0 0 6px 3px var(--opacity-color);
 

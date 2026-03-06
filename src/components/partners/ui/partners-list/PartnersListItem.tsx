@@ -15,7 +15,7 @@ export const PartnersListItem = ({ item }: IPartnersListItemProps) => {
           alt={item.link}
           width={item.img.width}
           height={item.img.height}
-          className="w-[clamp(160px,20vw,240px)]"
+          className="w-[clamp(160px,20vw,240px)] rounded-lg shadow-block-shadow transition duration-300 hover:scale-105 active:scale-95"
         />
       </Link>
     </li>

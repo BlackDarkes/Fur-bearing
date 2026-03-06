@@ -12,7 +12,7 @@ export const Form = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isLoading },
     reset,
   } = useForm<TypeUserData>({
     resolver: zodResolver(userDataSchema),
@@ -28,10 +28,6 @@ export const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit, (err) => {
-        console.error(
-          "ПОЛНЫЙ ОБЪЕКТ ОШИБОК ZOD:",
-          JSON.stringify(err, null, 2),
-        );
         console.log("ОШИБКА В ПОЛЕ FIO:", err.fio);
         console.log("ОШИБКА В ПОЛЕ EVENT:", err.event);
       })}
@@ -67,7 +63,7 @@ export const Form = () => {
         </div>
       </div>
 
-      <ButtonForm />
+      <ButtonForm isLoading={isLoading} />
     </form>
   );
 };
