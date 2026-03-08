@@ -5,6 +5,7 @@ import { News } from "@/components/news";
 import { Partners } from "@/components/partners";
 import { Releases } from "@/components/releases/ui/Releases";
 import { Footer } from "@/components/footer";
+import { Toast } from "@/components/toast";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <News />
         <Partners />
         <Releases />
+        <Toast />
       </main>
       <Footer />
     </>

@@ -5,6 +5,7 @@ interface IToastStore {
   message: string;
   isOpen: boolean;
   handleOpen: () => void;
+  handleClose: () => void;
   setMessage: (message: string) => void;
 }
 
@@ -18,8 +19,11 @@ export const useToastStore = create<IToastStore>()(
         set(() => ({ isOpen: !get().isOpen }));
         setTimeout(() => set(() => ({ isOpen: !get().isOpen })), 5000);
       },
+
+      handleClose: () => set({ isOpen: false }),
+
       setMessage: (message: string) => set({ message }),
     }),
     { name: "toast-store" },
-  )
-)
+  ),
+);
