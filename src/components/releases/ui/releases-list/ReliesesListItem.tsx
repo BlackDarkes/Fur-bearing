@@ -1,29 +1,31 @@
 import { IReleaseItems } from "@/constants/releases/release-items";
 import { Play, Pause } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface IReliesesListItemProps {
   item: IReleaseItems;
+  isPlaying: boolean; 
+  onPlay: (id: number) => void;
 }
 
-export const ReliesesListItem = ({ item }: IReliesesListItemProps) => {
-  const [isPlay, setIsPlay] = useState<boolean>(false);
+export const ReliesesListItem = ({ item, isPlaying, onPlay }: IReliesesListItemProps) => {
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [duration, setDuration] = useState<number>(0);
   const musicRef = useRef<HTMLAudioElement>(null);
 
-  const togglePlay = () => {
-    if (isPlay) {
+  useEffect(() => {
+    if (isPlaying) {
+      musicRef.current?.play().catch(e => console.error("Play error:", e));
+    } else {
       musicRef.current?.pause();
-
       if (musicRef.current) {
         musicRef.current.currentTime = 0;
       }
-    } else {
-      musicRef.current?.play();
     }
+  }, [isPlaying]);
 
-    setIsPlay(!isPlay);
+  const togglePlay = () => {
+    onPlay(item.id);
   };
 
   const onLoadedMetadata = () => {
@@ -36,6 +38,10 @@ export const ReliesesListItem = ({ item }: IReliesesListItemProps) => {
     if (musicRef.current) {
       setCurrentTime(musicRef.current.currentTime);
     }
+  };
+
+  const handleEnded = () => {
+    onPlay(item.id);
   };
 
   const formatTime = (time: number) => {
@@ -53,12 +59,12 @@ export const ReliesesListItem = ({ item }: IReliesesListItemProps) => {
         ref={musicRef}
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={onLoadedMetadata}
-        onEnded={() => setIsPlay(false)}
+        onEnded={handleEnded}
       />
 
       <div className="flex items-center gap-x-10">
         <button type="button" onClick={togglePlay}>
-          {isPlay ? <Pause /> : <Play />}
+          {isPlaying ? <Pause /> : <Play />}
         </button>
 
         <div className="flex flex-col w-full">
