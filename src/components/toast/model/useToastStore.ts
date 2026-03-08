@@ -17,7 +17,10 @@ export const useToastStore = create<IToastStore>()(
 
       handleOpen: () => {
         set(() => ({ isOpen: !get().isOpen }));
-        setTimeout(() => set(() => ({ isOpen: !get().isOpen })), 5000);
+        setTimeout(() => {
+          set(() => ({ isOpen: !get().isOpen }));
+          setTimeout(() => set({ message: "" }), 500);
+        }, 5000);
       },
 
       handleClose: () => set({ isOpen: false }),

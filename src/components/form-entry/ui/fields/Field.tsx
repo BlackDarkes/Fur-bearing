@@ -12,6 +12,7 @@ export const Field = ({ register, isFocus, setIsFocus }: IFieldProps) => {
     <input
       {...register}
       type="text"
+      autoComplete="off"
       placeholder="ФИО"
       onFocus={() => setIsFocus(true)}
       onBlur={() => setIsFocus(false)}

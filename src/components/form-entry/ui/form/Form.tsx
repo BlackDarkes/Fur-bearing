@@ -7,22 +7,31 @@ import { EVENT_ITEMS } from "@/constants/form-entry/event-items";
 import { cn } from "@/shared/lib/utils";
 import { useState } from "react";
 import { Field } from "../fields/Field";
+import { useToastStore } from "@/components/toast";
 
 export const Form = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isLoading },
-    reset,
+    formState: { errors, isSubmitting },
+    setValue
   } = useForm<TypeUserData>({
     resolver: zodResolver(userDataSchema),
-    mode: "onChange",
+    mode: "onSubmit",
+    defaultValues: {
+      fio: "",
+      event: EVENT_ITEMS[0].name,
+    },
   });
   const [isFocus, setIsFocus] = useState<boolean>(false);
+  const { handleOpen, setMessage } = useToastStore();
 
-  const onSubmit: SubmitHandler<TypeUserData> = (data: TypeUserData) => {
-    console.log(data);
-    reset();
+  const onSubmit: SubmitHandler<TypeUserData> = async (data: TypeUserData) => {
+    setMessage("Билет успешно забронирован!");
+    handleOpen();
+    
+    setValue("fio", "");
+    setValue("event", EVENT_ITEMS[0].name)  ;
   };
 
   return (
@@ -63,7 +72,7 @@ export const Form = () => {
         </div>
       </div>
 
-      <ButtonForm isLoading={isLoading} />
+      <ButtonForm isLoading={isSubmitting} />
     </form>
   );
 };
