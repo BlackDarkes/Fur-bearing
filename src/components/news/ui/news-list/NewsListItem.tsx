@@ -38,8 +38,8 @@ export const NewsListItem = ({ item }: INewsListItemProps) => {
       <Image
         src={item.img}
         alt={item.text}
-        width={item.img.width}
-        height={item.img.height}
+        width={1}
+        height={1}
         className="w-full h-full object-cover bg-center rounded-lg "
       />
 

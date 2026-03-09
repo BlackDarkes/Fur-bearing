@@ -13,8 +13,8 @@ export const PartnersListItem = ({ item }: IPartnersListItemProps) => {
         <Image
           src={item.img}
           alt={item.link}
-          width={item.img.width}
-          height={item.img.height}
+          width={1}
+          height={1}
           className="w-[clamp(160px,20vw,240px)] rounded-lg shadow-block-shadow transition duration-300 hover:scale-105 active:scale-95"
         />
       </Link>
