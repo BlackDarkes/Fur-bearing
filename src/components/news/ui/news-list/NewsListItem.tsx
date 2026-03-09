@@ -2,7 +2,7 @@ import { INewsItems } from "@/constants/news/news-items";
 import { cn } from "@/shared/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface INewsListItemProps {
   item: INewsItems;
@@ -10,6 +10,24 @@ interface INewsListItemProps {
 
 export const NewsListItem = ({ item }: INewsListItemProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isOverflowed, setIsOverflowed] = useState<boolean>(false);
+
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (contentRef.current) {
+        const { scrollHeight, clientHeight } = contentRef.current;
+
+        setIsOverflowed(scrollHeight > clientHeight + 5);
+      }
+    };
+
+    checkOverflow();
+
+    window.addEventListener("load", checkOverflow);
+    return () => window.removeEventListener("load", checkOverflow);
+  }, [item.text]);
 
   return (
     <li
@@ -33,11 +51,17 @@ export const NewsListItem = ({ item }: INewsListItemProps) => {
             : "opacity-0 select-none pointer-events-none",
         )}
       >
-        <div className="flex flex-col items-center mx-10 w-full h-[80%] text-primary-bg font-medium text-center text-[clamp(16px,4vw,20px)] overflow-y-auto scrollbar-hide max-sm:mx-5">
+        <div
+          ref={contentRef}
+          className={cn(
+            `flex flex-col items-center mx-15 w-full h-[80%] text-primary-bg font-medium text-center text-[clamp(16px,4vw,20px)] overflow-y-auto scrollbar-hide max-sm:mx-5`,
+            isOverflowed ? "justify-start" : "justify-center",
+          )}
+        >
           <span>{item.text}</span>
           <Link
             href={item.link}
-            className="mt-5 text-bold text-card-bg underline uppercase"
+            className="mt-5 text-bold text-card-bg underline uppercase transition duration-400 hover:text-button-bg"
           >
             Ссылка
           </Link>
