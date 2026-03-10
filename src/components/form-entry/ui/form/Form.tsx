@@ -36,6 +36,7 @@ export const Form = () => {
 
   return (
     <form
+      aria-label="form"
       onSubmit={handleSubmit(onSubmit, (err) => {
         console.log("ОШИБКА В ПОЛЕ FIO:", err.fio);
         console.log("ОШИБКА В ПОЛЕ EVENT:", err.event);
