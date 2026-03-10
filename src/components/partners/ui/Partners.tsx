@@ -6,7 +6,7 @@ import { PARTNERS_ITEMS } from "@/constants/partners/partners-items";
 
 export const Partners = () => {
   return (
-    <section id="partners" className="pb-section-padding-bottom">
+    <section id="partners" className="pb-section-padding-bottom scroll-mt-50">
       <Container>
         <h2 className="mb-[clamp(30px,4vw,60px)] text-center text-[clamp(28px,4vw,40px)] font-bold text-primary-color">Партнеры</h2>
 

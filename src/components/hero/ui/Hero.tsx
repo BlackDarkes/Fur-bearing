@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section
       id="merch"
-      className="pt-[clamp(20px,4vw,70px)] pb-section-padding-bottom"
+      className="pt-[clamp(0px,4vw,70px)] pb-section-padding-bottom scroll-mt-50"
     >
       <Container>
         <HeroList items={HERO_ITEMS} />

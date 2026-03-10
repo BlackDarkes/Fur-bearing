@@ -68,8 +68,8 @@ export const ReliesesListItem = ({ item, isPlaying, onPlay }: IReliesesListItemP
         </button>
 
         <div className="flex flex-col w-full">
-          <h3>{item.title}</h3>
-          <p>Александр Пушной</p>
+          <h3 className="text-[clamp(16px,2vw,18px)]">{item.title}</h3>
+          <p className="text-[clamp(12px,2vw,16px)]">Александр Пушной</p>
         </div>
       </div>
 

@@ -125,5 +125,5 @@ label {
 }
 
 main {
-  margin-top: clamp(126px, 15vw, 140px);
+  margin-top: clamp(95px, 15vw, 140px);
 }

@@ -5,7 +5,7 @@ import { Form } from "./form/Form";
 
 export const FormEntry = () => {
   return (
-    <section id="tickets" className="pb-section-padding-bottom">
+    <section id="tickets" className="pb-section-padding-bottom scroll-mt-50">
       <Container>
         <Form />
       </Container>
