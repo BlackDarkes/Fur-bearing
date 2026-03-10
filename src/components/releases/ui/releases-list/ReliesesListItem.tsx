@@ -1,4 +1,5 @@
 import { IReleaseItems } from "@/constants/releases/release-items";
+import { cn } from "@/shared/lib/utils";
 import { Play, Pause } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -63,7 +64,9 @@ export const ReliesesListItem = ({ item, isPlaying, onPlay }: IReliesesListItemP
       />
 
       <div className="flex items-center gap-x-[clamp(10px,2vw,20px)]">
-        <button type="button" onClick={togglePlay}>
+        <button type="button" onClick={togglePlay} className={cn(
+          `transition-all duration-400 hover:scale-110 hover:text-placeholder-color active:scale-90 active:text-placeholder-color`,
+        )}>
           {isPlaying ? <Pause /> : <Play />}
         </button>
 

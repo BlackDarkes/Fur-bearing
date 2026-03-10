@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero";
 import { FormEntry } from "@/components/form-entry";
 import { News } from "@/components/news";
 import { Partners } from "@/components/partners";
-import { Releases } from "@/components/releases/ui/Releases";
+import { Releases } from "@/components/releases";
 import { Footer } from "@/components/footer";
 import { Toast } from "@/components/toast";
 

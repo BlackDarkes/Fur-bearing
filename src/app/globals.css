@@ -28,6 +28,7 @@
   --form-shadow: 0 0 12px 1px var(--opacity-color);
   --burger-shadow: -4px 4px 12px 4px var(--opacity-color);
   --button-shadow: 0 0 6px 3px var(--opacity-color);
+  --header-shadow: 0 2px 12px 2px var(--opacity-color);
 
   /* Padding and Margin */
 
@@ -65,6 +66,7 @@
   --shadow-form-shadow: var(--form-shadow);
   --shadow-burger-shadow: var(--burger-shadow);
   --shadow-button-shadow: var(--button-shadow);
+  --shadow-header-shadow: var(--header-shadow);
 
   /* Padding and Margin */
 

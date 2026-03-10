@@ -17,10 +17,10 @@ export const Form = () => {
     setValue
   } = useForm<TypeUserData>({
     resolver: zodResolver(userDataSchema),
-    mode: "onSubmit",
+    mode: "onChange",
     defaultValues: {
       fio: "",
-      event: EVENT_ITEMS[0].name,
+      event: "",
     },
   });
   const [isFocus, setIsFocus] = useState<boolean>(false);
@@ -31,7 +31,7 @@ export const Form = () => {
     handleOpen();
     
     setValue("fio", "");
-    setValue("event", EVENT_ITEMS[0].name)  ;
+    setValue("event", "")  ;
   };
 
   return (
