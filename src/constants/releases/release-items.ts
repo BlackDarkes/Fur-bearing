@@ -7,28 +7,28 @@ interface IReleaseItems {
 const RELEASES_ITEMS: IReleaseItems[] = [
   {
     id: 1,
-    title: "Музыка",
+    title: "Слушает БАХА ",
     music: "/Fur-bearing/releases/music/music1.mp3",
   },
   {
     id: 2,
-    title: "Музыка",
-    music: "/Fur-bearing/releases/music/music1.mp3",
+    title: "гИИпноз",
+    music: "/Fur-bearing/releases/music/music2.mp3",
   },
   {
     id: 3,
-    title: "Музыка",
-    music: "/Fur-bearing/releases/music/music1.mp3",
+    title: "Трава у дома cover version",
+    music: "/Fur-bearing/releases/music/music3.mp3",
   },
   {
     id: 4,
-    title: "Музыка",
-    music: "/Fur-bearing/releases/music/music1.mp3",
+    title: "От винта!",
+    music: "/Fur-bearing/releases/music/music4.mp3",
   },
   {
     id: 5,
-    title: "Музыка",
-    music: "/Fur-bearing/releases/music/music1.mp3",
+    title: "Вершина",
+    music: "/Fur-bearing/releases/music/music5.mp3",
   },
 ];
 

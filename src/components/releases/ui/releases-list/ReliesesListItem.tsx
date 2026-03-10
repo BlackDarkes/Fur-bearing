@@ -62,7 +62,7 @@ export const ReliesesListItem = ({ item, isPlaying, onPlay }: IReliesesListItemP
         onEnded={handleEnded}
       />
 
-      <div className="flex items-center gap-x-10">
+      <div className="flex items-center gap-x-[clamp(10px,2vw,20px)]">
         <button type="button" onClick={togglePlay}>
           {isPlaying ? <Pause /> : <Play />}
         </button>
