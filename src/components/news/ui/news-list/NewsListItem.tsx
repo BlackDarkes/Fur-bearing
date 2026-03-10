@@ -61,7 +61,13 @@ export const NewsListItem = ({ item }: INewsListItemProps) => {
           <span>{item.text}</span>
           <Link
             href={item.link}
-            className="mt-5 text-bold text-card-bg underline uppercase transition duration-400 hover:text-button-bg"
+            className={
+              `mt-5 text-bold text-card-bg uppercase transition duration-400 hover:text-button-bg hover:no-underline
+              relative
+              before:content-[""] before:absolute before:-bottom-0.75 before:left-0 before:w-full before:h-0.5 before:bg-button-bg before:transition-all before:duration-400 before:scale-0 before:origin-left
+              hover:before:scale-100
+              active:opacity-80 before:active:opacity-80`
+            }
           >
             Ссылка
           </Link>

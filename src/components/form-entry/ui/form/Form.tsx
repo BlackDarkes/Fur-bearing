@@ -26,7 +26,7 @@ export const Form = () => {
   const [isFocus, setIsFocus] = useState<boolean>(false);
   const { handleOpen, setMessage } = useToastStore();
 
-  const onSubmit: SubmitHandler<TypeUserData> = async (data: TypeUserData) => {
+  const onSubmit: SubmitHandler<TypeUserData> = async () => {
     setMessage("Билет успешно забронирован!");
     handleOpen();
     
