@@ -17,6 +17,7 @@ interface IHeroItems {
   price: string;
   link: string;
   isDiscount?: boolean;
+  discount?: string;
 }
 
 const HERO_ITEMS: IHeroItems[] = [
@@ -33,6 +34,8 @@ const HERO_ITEMS: IHeroItems[] = [
     title: "Футболка с полной запечаткой «Песни Пушного. Надо радоваться! Желтый фон»",
     price: "1 100 ₽",
     link: "https://www.pinkbus.ru/tshirt-polnayazapechatka/1197064",
+    isDiscount: true,
+    discount: "1 000 ₽",
   },
   {
     id: 3,
@@ -54,6 +57,8 @@ const HERO_ITEMS: IHeroItems[] = [
     title: "Футболка с полной запечаткой «Песни Пушного. Катастрофически О_О черный фон»",
     price: "1 850 ₽",
     link: "https://www.pinkbus.ru/tshirt-polnayazapechatka/1198526",
+    isDiscount: true,
+    discount: "1 500 ₽",
   },
   {
     id: 6,
@@ -68,6 +73,8 @@ const HERO_ITEMS: IHeroItems[] = [
     title: "Сумка хб «Каверы Пушного. Обложка альбома с автографом. Черный фон.»",
     price: "1 100 ₽",
     link: "https://www.pinkbus.ru/cotton_bags/1167689",
+    isDiscount: true,
+    discount: "1 000 ₽",
   },
   {
     id: 8,
@@ -89,6 +96,8 @@ const HERO_ITEMS: IHeroItems[] = [
     title: "Сумка хб «Пушной и LP»",
     price: "1 100 ₽",
     link: "https://www.pinkbus.ru/cotton_bags/1220395",
+    isDiscount: true,
+    discount: "1 000 ₽",
   },
 ];
 

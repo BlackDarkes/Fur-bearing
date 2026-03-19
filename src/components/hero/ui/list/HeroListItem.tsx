@@ -14,12 +14,27 @@ export const HeroListItem = ({ item }: IHeroListItemProps) => {
 
       <div className="p-2.5">
         <div className="flex flex-col gap-y-[clamp(20px,10vw,25px)]">
-          <h3 title={item.title} className="w-60 h-11 text-[clamp(20px,4vw,28px)] font-semibold overflow-x-hidden text-nowrap text-ellipsis">
+          <h3
+            title={item.title}
+            className="w-60 h-11 text-[clamp(20px,4vw,28px)] font-semibold overflow-x-hidden text-nowrap text-ellipsis"
+          >
             {item.title}
           </h3>
-          <span className="text-[clamp(16px,4vw,24px)] text-accent-color font-bold">
-            {item.price}
-          </span>
+          {item.discount ? (
+            <div className="flex items-center">
+              <span className="text-[clamp(16px,4vw,24px)] text-gray-700 line-through font-bold">
+                {item.price}
+              </span>
+              →
+              <span className="text-[clamp(16px,4vw,24px)] text-accent-color font-bold">
+                {item.discount}
+              </span>
+            </div>
+          ) : (
+            <span className="text-[clamp(16px,4vw,24px)] text-accent-color font-bold">
+              {item.price}
+            </span>
+          )}
         </div>
 
         <Link
