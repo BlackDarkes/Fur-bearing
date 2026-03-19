@@ -8,13 +8,17 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-   turbopack: {
+  turbopack: {
     rules: {
       ".mp3": {
         as: "resource",
-        loaders: ["file-loader"]
+        loaders: ["file-loader"],
+      },
+       "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js"
       }
-    }
+    },
   },
 };
 

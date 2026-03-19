@@ -16,6 +16,7 @@ interface IHeroItems {
   title: string;
   price: string;
   link: string;
+  isDiscount?: boolean;
 }
 
 const HERO_ITEMS: IHeroItems[] = [
